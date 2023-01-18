@@ -1,6 +1,9 @@
 #pragma once
 
 #include <imgui.h>
+
+#include "Resources/Color.hpp"
+
 namespace Resources
 {
     class Texture
@@ -19,5 +22,5 @@ namespace Resources
         ImTextureID id();
     };
 
-    void DrawTextureEx(ImDrawList& dl, Texture& tex, ImVec2 pos, ImVec2 scale = { 1.f, 1.f }, float angle = 0.f);
+    void DrawTextureEx(Texture& tex, ImVec2 pos, ImVec2 scale = { 1.f, 1.f }, float angle = 0.f, Resources::Color color = WHITE);
 }

@@ -58,7 +58,7 @@ ImTextureID Resources::Texture::id()
     return pId;
 }
 
-void Resources::DrawTextureEx(ImDrawList& dl, Texture& tex, ImVec2 pos, ImVec2 scale, float angle)
+void Resources::DrawTextureEx(Texture& tex, ImVec2 pos, ImVec2 scale, float angle, Resources::Color color)
 {
     // Unit quad centered in 0
     ImVec2 p[4] = {
@@ -88,9 +88,10 @@ void Resources::DrawTextureEx(ImDrawList& dl, Texture& tex, ImVec2 pos, ImVec2 s
         p[i].y += pos.y;
     }
     
-    dl.AddImageQuad(tex.id(),
+    ImGui::GetBackgroundDrawList()->AddImageQuad(tex.id(),
         p[0], p[1], p[2], p[3],
         uv[0], uv[1], uv[2], uv[3],
-        IM_COL32_WHITE
+        //IM_COL32_WHITE
+        IM_COL32(color.r, color.g, color.b, color.a)
     );
 }
