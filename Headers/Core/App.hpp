@@ -1,6 +1,5 @@
 #pragma once
 #include "Resources/TextureManager.hpp"
-#include <GLFW/glfw3.h>
 
 enum class GameState
 {
@@ -13,7 +12,7 @@ enum class GameState
 struct AppData
 {
     ImVec2 mousePosition;
-
+    unsigned int frameCounter;
 };
 
 class App
@@ -33,4 +32,5 @@ public:
     void Update(GLFWwindow* _window);
 protected:
     void UpdateMousePos(GLFWwindow* _window);
+    void UpdateWindowIcon(GLFWwindow* _window);
 };
