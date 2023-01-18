@@ -43,6 +43,7 @@
     <ClInclude Include="Headers\Resources\Texture.hpp" />
     <ClInclude Include="Headers\Core\Menu.hpp" />
     <ClInclude Include="Headers\Resources\TextureManager.hpp" />
+    <ClInclude Include="Headers\Resources\Color.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
