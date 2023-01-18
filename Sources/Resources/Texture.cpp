@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 #include <stb_image.h>
-#include <GLFW/glfw3.h>
 
 #include "Resources/Texture.hpp"
 
@@ -14,7 +13,7 @@ void Resources::Texture::Create(const char* file)
     {
         fprintf(stderr, "Cannot load texture '%s'\n", file);
     }
-
+    pPixels = pixels;
     // Create texture on OpenGL side
     GLuint texture;
     glGenTextures(1, &texture);
@@ -34,7 +33,7 @@ void Resources::Texture::Create(const char* file)
     glBindTexture(GL_TEXTURE_2D, 0);
 
     // Free ram
-    stbi_image_free(pixels);
+    
 
     pId = (ImTextureID)((size_t)texture);
 }
@@ -43,6 +42,16 @@ void Resources::Texture::Delete()
 {
     GLuint temp = (GLuint)((size_t)pId);
     glDeleteTextures(1, &temp);
+    stbi_image_free(pPixels);
+}
+
+GLFWimage Resources::Texture::GetGlfwImage()
+{
+    GLFWimage temp;
+    temp.width = pWidth;
+    temp.height = pHeight;
+    temp.pixels = pPixels;
+    return temp;
 }
 
 int Resources::Texture::width()
@@ -56,6 +65,10 @@ int Resources::Texture::height()
 ImTextureID Resources::Texture::id()
 {
     return pId;
+}
+unsigned char* Resources::Texture::pixels()
+{
+    return pPixels;
 }
 
 void Resources::DrawTextureEx(Texture& tex, ImVec2 pos, ImVec2 scale, float angle, Resources::Color color)
