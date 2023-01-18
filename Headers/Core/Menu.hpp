@@ -8,4 +8,5 @@ public:
 
 	void Update();
 private:
+	bool starting;
 };
