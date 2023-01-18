@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="externals\src\imgui.cpp">
+      <Filter>externals</Filter>
+    </ClCompile>
+    <ClCompile Include="externals\src\imgui_demo.cpp">
+      <Filter>externals</Filter>
+    </ClCompile>
+    <ClCompile Include="externals\src\imgui_draw.cpp">
+      <Filter>externals</Filter>
+    </ClCompile>
+    <ClCompile Include="externals\src\imgui_impl_glfw.cpp">
+      <Filter>externals</Filter>
+    </ClCompile>
+    <ClCompile Include="externals\src\imgui_impl_opengl3.cpp">
+      <Filter>externals</Filter>
+    </ClCompile>
+    <ClCompile Include="externals\src\imgui_tables.cpp">
+      <Filter>externals</Filter>
+    </ClCompile>
+    <ClCompile Include="externals\src\imgui_widgets.cpp">
+      <Filter>externals</Filter>
+    </ClCompile>
+    <ClCompile Include="externals\src\stb_image.cpp">
+      <Filter>externals</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Core\App.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Resources\Texture.cpp" />
+    <ClCompile Include="Sources\Core\Game.cpp" />
+    <ClCompile Include="Sources\Core\Menu.cpp" />
+    <ClCompile Include="Sources\Resources\TextureManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers\Core\App.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Resources\Texture.hpp" />
+    <ClInclude Include="Headers\Core\Menu.hpp" />
+    <ClInclude Include="Headers\Resources\TextureManager.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d0dab916-f416-4d00-9162-9c88687021f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="externals">
+      <UniqueIdentifier>{adcf2b31-4982-46f4-b41b-28e85e73017e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
