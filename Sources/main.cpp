@@ -47,7 +47,7 @@ int main(int argc, char* argv[])
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init(glslVersion);
 
-    App* app = new App();
+    Core::App* app = new Core::App();
     // Main loop
     while (!glfwWindowShouldClose(window) && !app->exiting)
     {

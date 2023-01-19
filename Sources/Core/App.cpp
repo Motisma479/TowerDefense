@@ -1,7 +1,7 @@
 #include "Core/App.hpp"
 #include <iostream>
 
-App::App() : exiting(false), gameState(GameState::MainMenu)
+Core::App::App() : exiting(false), gameState(GameState::MainMenu)
 {
 	appData =
 	{
@@ -12,23 +12,23 @@ App::App() : exiting(false), gameState(GameState::MainMenu)
 	textureManager.LoadTextureFolder("assets");
 }
 
-App::~App()
+Core::App::~App()
 {
 }
 
-void App::UpdateMousePos(GLFWwindow* _window)
+void Core::App::UpdateMousePos(GLFWwindow* _window)
 {
 	double X;
 	double Y;
 	glfwGetCursorPos(_window, &X, &Y);
 	appData.mousePosition = { (float)X,(float)Y };
 }
-void App::UpdateWindowIcon(GLFWwindow* _window)
+void Core::App::UpdateWindowIcon(GLFWwindow* _window)
 {
 	GLFWimage icon = textureManager.Get("icon")->GetGlfwImage();
 	glfwSetWindowIcon(_window, 1, &icon);
 }
-void App::Update(GLFWwindow* _window)
+void Core::App::Update(GLFWwindow* _window)
 {
 	UpdateMousePos(_window);
 	UpdateWindowIcon(_window);

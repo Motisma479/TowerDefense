@@ -1,12 +1,15 @@
 #pragma once
 
-class Menu
+namespace Core
 {
-public:
-	Menu();
-	~Menu();
+	class Menu
+	{
+	public:
+		Menu();
+		~Menu();
 
-	void Update();
-private:
-	bool starting;
-};
+		void Update();
+	private:
+		bool starting;
+	};
+}

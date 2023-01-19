@@ -1,9 +1,9 @@
 #include "Core/Menu.hpp"
 
-Menu::Menu()
+Core::Menu::Menu()
 {
 }
 
-Menu::~Menu()
+Core::Menu::~Menu()
 {
 }

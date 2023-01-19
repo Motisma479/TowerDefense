@@ -5,16 +5,18 @@
 #include <memory>
 
 #include "Resources/Texture.hpp"
-
-class TextureManager
+namespace Resources
 {
-public:
-	TextureManager();
-	~TextureManager();
+	class TextureManager
+	{
+	public:
+		TextureManager();
+		~TextureManager();
 
-	void LoadTextureFolder(const char* folder);
-	Resources::Texture* Get(const char* name);
+		void LoadTextureFolder(const char* folder);
+		Resources::Texture* Get(const char* name);
 
-private:
-	std::unordered_map<std::string, std::unique_ptr<Resources::Texture>> data;
-};
+	private:
+		std::unordered_map<std::string, std::unique_ptr<Resources::Texture>> data;
+	};
+}

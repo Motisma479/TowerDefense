@@ -2,14 +2,14 @@
 #include <filesystem>
 #include <iostream>
 
-TextureManager::TextureManager()
+Resources::TextureManager::TextureManager()
 {
 }
 
-TextureManager::~TextureManager()
+Resources::TextureManager::~TextureManager()
 {
 }
-void TextureManager::LoadTextureFolder(const char* folder)
+void Resources::TextureManager::LoadTextureFolder(const char* folder)
 {
 	for (const auto& entry : std::filesystem::directory_iterator(folder))
 	{
@@ -22,7 +22,7 @@ void TextureManager::LoadTextureFolder(const char* folder)
 		int i = 0;
 	}
 }
-Resources::Texture* TextureManager::Get(const char* name)
+Resources::Texture* Resources::TextureManager::Get(const char* name)
 {
 	std::unordered_map<std::string, std::unique_ptr<Resources::Texture>>::const_iterator texture = data.find(name);
 	

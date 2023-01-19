@@ -1,36 +1,39 @@
 #pragma once
 #include "Resources/TextureManager.hpp"
 
-enum class GameState
+namespace Core
 {
-    MainMenu,
-    Game,
-    Editor,
-    Setings
-};
+    enum class GameState
+    {
+        MainMenu,
+        Game,
+        Editor,
+        Setings
+    };
 
-struct AppData
-{
-    ImVec2 mousePosition;
-    unsigned int frameCounter;
-};
+    struct AppData
+    {
+        ImVec2 mousePosition;
+        unsigned int frameCounter;
+    };
 
-class App
-{
-public:
-    App();
-    ~App();
+    class App
+    {
+    public:
+        App();
+        ~App();
 
-    bool exiting;
+        bool exiting;
 
-    AppData appData;
+        AppData appData;
 
-    GameState gameState;
+        GameState gameState;
 
-    TextureManager textureManager;
+        Resources::TextureManager textureManager;
 
-    void Update(GLFWwindow* _window);
-protected:
-    void UpdateMousePos(GLFWwindow* _window);
-    void UpdateWindowIcon(GLFWwindow* _window);
-};
+        void Update(GLFWwindow* _window);
+    protected:
+        void UpdateMousePos(GLFWwindow* _window);
+        void UpdateWindowIcon(GLFWwindow* _window);
+    };
+}
