@@ -35,6 +35,7 @@
     <ClCompile Include="Sources\Core\Game.cpp" />
     <ClCompile Include="Sources\Core\Menu.cpp" />
     <ClCompile Include="Sources\Resources\TextureManager.cpp" />
+    <ClCompile Include="Sources\UI\Button.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Core\App.hpp">
@@ -44,6 +45,7 @@
     <ClInclude Include="Headers\Core\Menu.hpp" />
     <ClInclude Include="Headers\Resources\TextureManager.hpp" />
     <ClInclude Include="Headers\Resources\Color.hpp" />
+    <ClInclude Include="Headers\UI\Button.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">

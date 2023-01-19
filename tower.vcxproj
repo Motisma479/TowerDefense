@@ -94,6 +94,7 @@
     <ClCompile Include="Sources\main.cpp" />
     <ClCompile Include="Sources\Resources\Texture.cpp" />
     <ClCompile Include="Sources\Resources\TextureManager.cpp" />
+    <ClCompile Include="Sources\UI\Button.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Core\App.hpp" />
@@ -101,6 +102,7 @@
     <ClInclude Include="Headers\Resources\Color.hpp" />
     <ClInclude Include="Headers\Resources\Texture.hpp" />
     <ClInclude Include="Headers\Resources\TextureManager.hpp" />
+    <ClInclude Include="Headers\UI\Button.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
