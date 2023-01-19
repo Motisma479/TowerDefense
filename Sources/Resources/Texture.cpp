@@ -21,6 +21,10 @@ void Resources::Texture::Create(const char* file)
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, pWidth, pHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, pixels);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+
+
 
     // Gen mipmaps
     glGenerateMipmapFuncType glGenerateMipmapFunc = (glGenerateMipmapFuncType)glfwGetProcAddress("glGenerateMipmap");
@@ -100,7 +104,7 @@ void Resources::DrawTextureEx(Texture& tex, ImVec2 pos, ImVec2 scale, float angl
         p[i].x += pos.x;
         p[i].y += pos.y;
     }
-    
+
     ImGui::GetBackgroundDrawList()->AddImageQuad(tex.id(),
         p[0], p[1], p[2], p[3],
         uv[0], uv[1], uv[2], uv[3],
