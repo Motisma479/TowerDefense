@@ -4,6 +4,12 @@
 #include <GLFW/glfw3.h>
 
 #include "Resources/Color.hpp"
+#include "Core/Maths/Maths.hpp"
+
+namespace Resources
+{
+    class Texture;
+}
 
 namespace Resources
 {
@@ -26,5 +32,5 @@ namespace Resources
         ImTextureID id();
         unsigned char* pixels();
     };
-    void DrawTextureEx(Texture& tex, ImVec2 pos, ImVec2 scale = { 1.f, 1.f }, float angle = 0.f, Resources::Color color = WHITE);
+    void DrawTextureEx(Texture& tex, Core::Maths::Vec2 pos, Core::Maths::Vec2 scale = { 1.f, 1.f }, float angle = 0.f, Resources::Color color = WHITE);
 }

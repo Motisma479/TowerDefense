@@ -46,6 +46,7 @@
     <ClInclude Include="Headers\Resources\TextureManager.hpp" />
     <ClInclude Include="Headers\Resources\Color.hpp" />
     <ClInclude Include="Headers\UI\Button.hpp" />
+    <ClInclude Include="Headers\Core\Maths\Maths.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -54,5 +55,8 @@
     <Filter Include="externals">
       <UniqueIdentifier>{adcf2b31-4982-46f4-b41b-28e85e73017e}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Headers\Core\Maths\Maths.inl" />
   </ItemGroup>
 </Project>

@@ -75,7 +75,7 @@ unsigned char* Resources::Texture::pixels()
     return pPixels;
 }
 
-void Resources::DrawTextureEx(Texture& tex, ImVec2 pos, ImVec2 scale, float angle, Resources::Color color)
+void Resources::DrawTextureEx(Texture& tex, Core::Maths::Vec2 pos, Core::Maths::Vec2 scale, float angle, Resources::Color color)
 {
     // Unit quad centered in 0
     ImVec2 p[4] = {
