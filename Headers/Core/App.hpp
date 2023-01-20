@@ -3,6 +3,11 @@
 
 namespace Core
 {
+    struct Mouse
+    {
+        Core::Maths::Vec2 position;
+        int state[3];
+    };
     enum class GameState
     {
         MainMenu,
@@ -10,30 +15,28 @@ namespace Core
         Editor,
         Setings
     };
-
     struct AppData
     {
-        ImVec2 mousePosition;
+        Mouse mouse;
         unsigned int frameCounter;
     };
 
     class App
     {
     public:
-        App();
+        App(GLFWwindow* _window);
         ~App();
 
         bool exiting;
-
         AppData appData;
-
         GameState gameState;
-
+        GLFWwindow* window;
         Resources::TextureManager textureManager;
 
-        void Update(GLFWwindow* _window);
+        void Update();
     protected:
-        void UpdateMousePos(GLFWwindow* _window);
-        void UpdateWindowIcon(GLFWwindow* _window);
+        void UpdateMousePos();
+        void UpdateMouseState();
+        void UpdateWindowIcon();
     };
 }
